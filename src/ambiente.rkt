@@ -27,8 +27,7 @@
 (require "valores.rkt")
 
 ;; ambiente : tipo de dato
-;; Eepresentar las ligaduras de variables con sus tres variantes
-;; vacío, extendido y recursivo.
+;; representar las ligaduras de variables con sus tres variantes vacío, extendido y recursivo.
 
 (define-datatype ambiente ambiente?
   (ambiente-vacio)
@@ -43,8 +42,7 @@
    (env ambiente?)))
 
 ;; posicion-en : symbol x lista de symbols -> int o #f
-;; Retorna la posición de la primera aparición de id en la
-;; lista, o #f si no aparece.
+;; retorna la posición de la primera aparición de id en la lista, o #f si no aparece.
 (define posicion-en
   (lambda (id lst)
     (letrec ((buscar (lambda (resto i)

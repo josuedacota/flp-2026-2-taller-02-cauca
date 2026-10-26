@@ -57,11 +57,20 @@
         #t
         (eopl:error quien "Se esperaban al menos ~s argumentos y llegaron ~s" n (length args)))))
 
+;; hay-cero? : lista de números -> boolean
+;; retorna #t si algún elemento de la lista es cero, sea entero (0) o flotante (0.0 o -0.0).
+(define hay-cero?
+  (lambda (lst)
+    (cond
+      ((null? lst) #f)
+      ((zero? (car lst)) #t)
+      (else (hay-cero? (cdr lst))))))
+
 ;; aplicar-division : lista de números -> número
-;; Levanta error si algún divisor es cero.
+;; divide el primer argumento entre los demás. Levanta error si algún divisor es cero (entero o flotante), en lugar de devolver infinito.
 (define aplicar-division
   (lambda (args)
-    (if (member 0 (cdr args))
+    (if (hay-cero? (cdr args))
         (eopl:error '/ "División por cero")
         (apply / args))))
 
