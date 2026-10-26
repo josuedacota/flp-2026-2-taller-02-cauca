@@ -19,10 +19,8 @@ parte del grupo.
 
 | Nombre completo | Código | Correo institucional |
 |---|---|---|
-| | | |
-| | | |
-| | | |
-| | | |
+| Josue David Cocoma Tascon | 2477087 | COMPLETAR@correounivalle.edu.co |
+| Juan Diego Montaño Vergara | 2477334 | COMPLETAR@correounivalle.edu.co |
 
 ## Cómo se entrega
 
